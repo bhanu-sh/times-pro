@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --font-sans: var(--font-open-sans), sans-serif;
+  --font-heading: var(--font-montserrat), sans-serif;
+  --color-times-red: #DA2128;
+  --color-times-blue: #00008C;
+  --color-times-dark: #1c1d1f;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-open-sans), sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Custom styles for rich text policy descriptions (from Strapi HTML injection) */
+.rich-text-content {
+  font-family: var(--font-open-sans), sans-serif;
+  line-height: 1.7;
+}
+
+.rich-text-content h1, 
+.rich-text-content h2, 
+.rich-text-content h3, 
+.rich-text-content h4 {
+  font-family: var(--font-open-sans), sans-serif; /* Keep same font but bold it */
+  color: #DA2128;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.rich-text-content h1 { font-size: 1.8rem; }
+.rich-text-content h2 { font-size: 1.4rem; }
+.rich-text-content h3 { font-size: 1.2rem; }
+.rich-text-content h4 { font-size: 1.1rem; }
+
+.rich-text-content p {
+  color: #000000;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.rich-text-content ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.rich-text-content ul li {
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.rich-text-content ul li::before {
+  content: "→";
+  color: #DA2128;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.rich-text-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d6d6e7;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.rich-text-content td {
+  border: 1px solid #d6d6e7;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #00008C;
+}
+
+.rich-text-content figure {
+  margin: 0;
+  width: 100%;
+  overflow-x: auto;
+}
+
