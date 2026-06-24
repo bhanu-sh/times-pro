@@ -276,44 +276,51 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             
             <div className="text-center max-w-xl mx-auto mb-12">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-times-blue tracking-tight mb-2">Explore Popular Categories</h2>
-              <p className="text-zinc-500 text-xs md:text-sm">Find professional programs across diverse career fields and upskilling tracks.</p>
-            </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-times-blue tracking-tight mb-2">
+  Proven Experience
+</h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
-              {categories.slice(0, 12).map((cat) => {
-                const title = cat.attributes?.Title || "Category";
-                const slug = cat.attributes?.Slug || "";
-                const courseCount = cat.attributes?.TotalCourseCount || 0;
-                const iconUrl = cat.attributes?.Icon?.data?.attributes?.url;
-
-                return (
-                  <Link 
-                    key={cat.id}
-                    href={`/courses/${slug}`}
-                    className="p-5 rounded-lg border border-zinc-100 hover:border-times-blue bg-zinc-50 hover:bg-white hover:shadow-md text-center transition-all duration-300 flex flex-col items-center justify-center group"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center mb-3 group-hover:bg-[#00008c]/5 transition-colors">
-                      {iconUrl ? (
-                        <Image 
-                          src={iconUrl}
-                          alt={title}
-                          width={24}
-                          height={24}
-                          className="w-6 h-6 object-contain"
-                        />
-                      ) : (
-                        <svg className="w-6 h-6 text-times-blue" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                        </svg>
-                      )}
-                    </div>
-                    <span className="font-extrabold text-xs md:text-sm text-zinc-900 group-hover:text-times-blue block leading-tight mb-1">{title}</span>
-                    <span className="text-[10px] text-zinc-400 font-medium">{courseCount} Programmes</span>
-                  </Link>
-                );
-              })}
+<p className="text-zinc-500 text-xs md:text-sm">
+  Extensive experience in IEC campaigns, capacity building, behaviour change communication and large-scale government project execution.
+</p>
+              
             </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+  <div className="p-6 rounded-lg border bg-white text-center shadow-sm">
+    <h3 className="text-2xl font-bold text-times-blue">65+ Lakh</h3>
+    <p className="text-sm mt-2">IEC Copies Produced</p>
+  </div>
+
+  <div className="p-6 rounded-lg border bg-white text-center shadow-sm">
+    <h3 className="text-2xl font-bold text-times-blue">50+ Cr</h3>
+    <p className="text-sm mt-2">Project Value</p>
+  </div>
+
+  <div className="p-6 rounded-lg border bg-white text-center shadow-sm">
+    <h3 className="text-xl font-bold text-times-blue">Multiple Districts</h3>
+    <p className="text-sm mt-2">Implementation Coverage</p>
+  </div>
+
+  <div className="p-6 rounded-lg border bg-white text-center shadow-sm">
+    <h3 className="text-xl font-bold text-times-blue">Outdoor IEC</h3>
+    <p className="text-sm mt-2">Activities & Campaigns</p>
+  </div>
+
+  <div className="p-6 rounded-lg border bg-white text-center shadow-sm">
+    <h3 className="text-xl font-bold text-times-blue">Training & Capacity</h3>
+    <p className="text-sm mt-2">Building Programs</p>
+  </div>
+
+  <div className="p-6 rounded-lg border bg-white text-center shadow-sm">
+    <h3 className="text-xl font-bold text-times-blue">PRI & Community</h3>
+    <p className="text-sm mt-2">Engagement Initiatives</p>
+  </div>
+
+</div>
+
+
+            
 
           </div>
         </section>
@@ -344,12 +351,20 @@ export default function Home() {
 
             {/* Right Text details & image */}
             <div className="lg:col-span-6 order-1 lg:order-2">
-              <span className="text-times-red font-semibold text-xs md:text-sm uppercase tracking-widest block mb-1.5">Upskilling Outcomes</span>
-              <h2 className="text-2xl md:text-4xl font-extrabold text-times-blue tracking-tight mb-4">{whyUs.Title || "The TimesPro Advantage"}</h2>
-              <div 
-                className="text-zinc-600 text-sm md:text-base leading-relaxed mb-6 [&_p]:mb-3"
-                dangerouslySetInnerHTML={{ __html: whyUs.ShortDescription }}
-              />
+              <span className="text-times-red font-semibold text-xs md:text-sm uppercase tracking-widest block mb-1.5">About TimePro</span>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-times-blue tracking-tight mb-4">TimesPro: Vision & Business Segments</h2>
+              <div className="text-zinc-600 text-sm md:text-base leading-relaxed mb-6">
+  <p>
+    TimesPro is India's leading higher edtech platform with a vision to make
+    learners future-ready through industry-relevant learning experiences.
+  </p>
+
+  <p className="mt-3">
+    Through Public Sector, Private Sector and Self-Paid Programs, TimesPro
+    delivers large-scale skilling, capacity building, behavioural change and
+    government project execution initiatives across India.
+  </p>
+</div>
               <a 
                 href="#callback-section"
                 onClick={(e) => {
@@ -358,7 +373,7 @@ export default function Home() {
                 }}
                 className="inline-block border border-times-blue hover:bg-times-blue text-times-blue hover:text-white text-xs font-bold px-8 py-3.5 rounded transition-all uppercase tracking-wide cursor-pointer"
               >
-                {whyUs.Button?.Text || "Know More"}
+               Explore Our Capabilities
               </a>
             </div>
 
@@ -370,9 +385,9 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             
             <div className="text-center max-w-xl mx-auto mb-12">
-              <span className="text-times-red font-semibold text-xs md:text-sm uppercase tracking-widest block mb-1.5">For Organizations</span>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-times-blue tracking-tight mb-2">Enterprise Upskilling Solutions</h2>
-              <p className="text-zinc-500 text-xs md:text-sm">Partner with TimesPro to train talent, develop leadership capabilities, and build tech strength.</p>
+              <span className="text-times-red font-semibold text-xs md:text-sm uppercase tracking-widest block mb-1.5">Training Excellence</span>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-times-blue tracking-tight mb-2">Training & Capacity Building Expertise</h2>
+              <p className="text-zinc-500 text-xs md:text-sm">End-to-end training, capacity building, behaviour change communication and community engagement solutions.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
