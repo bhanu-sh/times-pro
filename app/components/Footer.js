@@ -89,6 +89,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <a href="#school-safety-audit" className="text-zinc-700 hover:text-times-blue transition-colors text-xs font-semibold">
+                  School Safety Audit (UP Project)
+                </a>
+              </li>
+              <li>
                 <Link href="/privacy-policy" className="text-zinc-700 hover:text-times-blue transition-colors text-xs font-semibold">
                   Privacy Policy
                 </Link>
@@ -119,21 +124,25 @@ export default function Footer() {
             <span className="font-bold text-zinc-700">Trending Executive Education course categories: </span>
             General Management | Leadership & Strategy | Technology & Analytics | Marketing & Sales
           </p>
+          <p className="leading-relaxed mb-3">
+            <span className="font-bold text-zinc-700">Flagship Government Initiative: </span>
+            Uttar Pradesh School Safety Audit & Risk Assessment Project — Comprehensive safety audits of 1,40,555+ government schools across 75 districts under Department of Basic & Secondary Education, Government of Uttar Pradesh.
+          </p>
           <p className="leading-relaxed">
-            <span className="font-bold text-zinc-700">Trending Enterprise Solutions: </span>
-            Technology Solutions | Signature Programmes | Bespoke Learning | OD Solutions | Content Solutions
+            <span className="font-bold text-zinc-700">Transactional Email System (AWS SES): </span>
+            System notifications, auditor 2FA OTPs, inspection schedules, and safety certificates are sent via Amazon Web Services Simple Email Service (AWS SES) with SPF, DKIM, and DMARC authentication. Zero promotional mailings.
           </p>
         </div>
 
         {/* Fraudster Warning Box */}
         <div className="my-6 p-4 rounded border border-yellow-200 bg-yellow-50/50 text-xs text-zinc-600 leading-relaxed">
-          <span className="font-bold text-times-red block mb-1">⚠️ BEWARE OF FRAUDSTERS</span>
-          We never solicit any monetary transaction outside of our official platform. Only trust emails from @timespro.com or @timesgroup.com domains and make course payments through our official channels only. When in doubt, verify authenticity by calling 1800-120-2020 or emailing contactus@timespro.com
+          <span className="font-bold text-times-red block mb-1">⚠️ BEWARE OF FRAUDSTERS & VERIFY OFFICIAL COMMUNICATIONS</span>
+          We never solicit any monetary transaction outside of our official platform. Official school safety audits for government schools are conducted strictly free of charge. Only trust emails from @timespro.com or @timesgroup.com domains and make course payments through our official channels only. When in doubt, verify authenticity by calling 1800-120-2020 or emailing contactus@timespro.com
         </div>
 
         {/* Copyright & Disclaimer Bottom Bar */}
         <div className="border-t border-zinc-200 pt-6 flex flex-col md:flex-row items-center justify-between text-zinc-500 text-[10px] md:text-xs text-center md:text-left gap-4">
-          <p>Copyright ©️ 2026 Bennett, Coleman & Co. Ltd. All rights reserved.</p>
+          <p>Copyright ©️ {new Date().getFullYear()} Bennett, Coleman & Co. Ltd. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-times-blue">Privacy Policy</Link>
             <Link href="/terms-of-use" className="hover:text-times-blue">Terms & Conditions</Link>
