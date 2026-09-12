@@ -12,8 +12,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "Online Certification Courses & Programmes for Career Growth - TimesPro",
-  description: "Explore TimesPro’s Online Certifications Courses & Training to advance your career with PGPs, Master’s Programs, Banking & AI courses, and live training.",
+  title: "TimesPro - Executive Education, Programmes & School Safety Audit Initiative",
+  description: "TimesPro (Bennett, Coleman & Co. Ltd. - The Times Group) provides executive education, certification programmes, and executes large-scale government initiatives including the Uttar Pradesh School Safety Audit & Risk Assessment Project across 1,40,555+ schools.",
 };
 
 export default function RootLayout({ children }) {
