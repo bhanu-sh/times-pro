@@ -12,8 +12,19 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "TimesPro - Executive Education, Programmes & School Safety Audit Initiative",
-  description: "TimesPro (Bennett, Coleman & Co. Ltd. - The Times Group) provides executive education, certification programmes, and executes large-scale government initiatives including the Uttar Pradesh School Safety Audit & Risk Assessment Project across 1,40,555+ schools.",
+  title: "Online Certification Courses & Programmes for Career Growth - TimesPro",
+  description: "Explore TimesPro’s Online Certifications Courses & Training to advance your career with PGPs, Master’s Programs, Banking & AI courses, and live training.",
+  metadataBase: new URL("https://timespro.com"),
+  alternates: {
+    canonical: "/",
+  },
+  // IMPORTANT: This tells search engines not to index THIS SPECIFIC DOMAIN.
+  // If this same codebase is deployed to the real timespro.com, you MUST make this conditional!
+  // e.g., robots: process.env.IS_STAGING === "true" ? { index: false, follow: false } : { index: true, follow: true }
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }) {
